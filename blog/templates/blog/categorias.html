@@ -1,0 +1,46 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<section>
+<div style="width: 100%; background-color: #400808cc; margin: auto; color: rgb(175, 175, 175); text-align: center;">
+    Categorías: &nbsp; &#183;
+    {% for post in posts %}
+        {% for categoria in post.categorias.all %}
+            &nbsp; {{categoria.nombre}} &nbsp; &#183;	
+            {% endfor %}
+    {% endfor %}
+</div>
+</section>
+
+    {% for post in posts %}
+    
+    <div><p>
+ <!-- Heading -->
+    <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.imagen.url}}" alt="" style="width: 60%;">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-lower" style="color: rgb(255, 255, 255);">{{post.titulo}}</span>
+            <span class="section-heading-upper" style="color: rgb(255, 255, 255);">{{post.contenido}}</span>
+          </h2>
+        <div style="text-align: left; font-size: 0.8em;">
+            Blog posteado por: {{post.autor}}
+        </div>
+         
+        </div>
+      </div>
+    </div>
+    </section>
+
+    {% endfor %}
+
+
+
+
+{% endblock %}
