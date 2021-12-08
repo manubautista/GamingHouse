@@ -152,4 +152,4 @@ EMAIL_PORT=587
 EMAIL_HOST_USER="manubautista2009@gmail.com"
 EMAIL_HOST_PASSWORD="czxhxzmfpcnjsknh"
 
-STATICFILES_STORAGE = 'whitenise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
