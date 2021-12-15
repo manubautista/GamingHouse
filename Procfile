@@ -1,1 +1,0 @@
-web: gunicorn GamingHouse.wsgi --log-file -
